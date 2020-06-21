@@ -1,8 +1,8 @@
 function game() {
     const weapons = {
-        rock: ['scissors', 'lizard'],
-        paper: ['rock', 'spock'],
-        scissors: ['paper', 'lizard']
+        rock: ['scissors'],
+        paper: ['rock'],
+        scissors: ['paper']
         //lizard: ['spock', 'paper'],
         //pock: ['scissors', 'rock'],
         //nuke: ['rock', 'paper', 'scissors', 'lizard', 'spock']
@@ -15,7 +15,7 @@ function game() {
     
     function playerPrompt() {
         let prompt = window.prompt("Enter 'rock','paper' or 'scissors':");
-        if (!Object.keys(weapons).includes(prompt)) {
+        while (!Object.keys(weapons).includes(prompt)) {
             prompt = window.prompt("Please enter 'rock', 'paper' or 'scissors' only:");
         }
         return prompt;
